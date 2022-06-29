@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// 导入路由
+import { BrowserRouter as Router, Route,Redirect } from 'react-router-dom'
 
+// 导入页面组件
+import Layout from './pages/Layout'
+
+// 配置路由规则
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Route path="/"  component={Layout}></Route>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
